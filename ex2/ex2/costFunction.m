@@ -20,7 +20,10 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
+h_theta = sigmoid(X*theta);
+J = (1/m) * sum(-((log(h_theta))'*y) - ((log(1-h_theta))'*(1-y)));
 
+grad = (1/m * sum(X .* repmat((h_theta-y), 1, size(X, 2))));
 
 
 

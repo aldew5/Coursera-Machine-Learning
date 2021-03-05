@@ -19,10 +19,15 @@ for iter = 1:num_iters
     
     k = 1:m;
     
+    % h_theta - the feature value
     temp1 = sum((theta(1) + theta(2) .* X(k, 2)) - y(k));
+    % the predicted value - the actual value multiplied by the data point value
     temp2 = sum(((theta(1) + theta(2) .* X(k, 2)) - y(k)) .* X(k, 2));
     
+    % simultaneous update
+    % set theta to be the new value average out, multiplied by the learning rate
     theta(1) = theta(1) - (temp1 * (1/m) * alpha);
+    
     theta(2) = theta(2) - (temp2 * (1/m) * alpha);
 
 
