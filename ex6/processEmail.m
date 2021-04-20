@@ -100,7 +100,10 @@ while ~isempty(email_contents)
 
 
 
-
+    idx = strmatch(str, vocabList, 'exact');
+    if ~isempty(idx)
+        word_indices = [word_indices; idx];
+    endif
 
 
 
