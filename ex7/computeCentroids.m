@@ -27,9 +27,12 @@ centroids = zeros(K, n);
 %
 
 % Loop over all of the centroids
-for k=1:K % for-loop over the centroids 
+for k = 1:K
+   % vectorized 
+   % take the mean of all the points within
+   % the same cluster   
    centroids(k, :) = mean(X(idx==k, :));
-end
+
 % =============================================================
 
 
