@@ -30,15 +30,7 @@ for iter = 1:num_iters
     
     theta(2) = theta(2) - (temp2 * (1/m) * alpha);
 
-
-
-
-
-    % ============================================================
-
     % Save the cost J in every iteration    
     J_history(iter) = computeCost(X, y, theta);
-
-end
 
 end
