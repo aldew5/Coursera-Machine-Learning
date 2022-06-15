@@ -92,7 +92,6 @@ p = svmPredict(model, Xtest);
 fprintf('Test Accuracy: %f\n', mean(double(p == ytest)) * 100);
 pause;
 
-
 %% ================= Part 5: Top Predictors of Spam ====================
 %  Since the model we are training is a linear SVM, we can inspect the
 %  weights learned by the model to understand better how it is determining
